@@ -58,6 +58,21 @@
 
   <dependencies>
     <dependency>
+      <groupId>net.serenity-bdd</groupId>
+      <artifactId>serenity-screenplay</artifactId>
+      <version>2.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>net.serenity-bdd</groupId>
+      <artifactId>serenity-junit</artifactId>
+      <version>2.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>net.serenity-bdd</groupId>
+      <artifactId>serenity-core</artifactId>
+      <version>2.2.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
       <version>3.5.4</version>
@@ -162,6 +177,22 @@
       <artifactId>spring-test</artifactId>
       <version>${spring.version}</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.5</version>
     </dependency>
   </dependencies>
 
