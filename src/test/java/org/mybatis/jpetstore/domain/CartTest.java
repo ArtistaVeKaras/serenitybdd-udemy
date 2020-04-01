@@ -16,10 +16,8 @@
 package org.mybatis.jpetstore.domain;
 
 import org.junit.jupiter.api.Test;
-
 import java.math.BigDecimal;
 import java.util.Iterator;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 class CartTest {
