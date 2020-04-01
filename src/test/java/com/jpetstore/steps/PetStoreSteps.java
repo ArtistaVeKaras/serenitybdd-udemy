@@ -62,6 +62,7 @@ public class PetStoreSteps extends ScenarioSteps {
 
     @Step("Login into application with username: {0} & password: {1}")
     public DashbordPage doLogin(String username, String password) {
+        basePage.clickOnSignIn();
         return loginPage.doLogin(username, password);
     }
 
@@ -73,6 +74,24 @@ public class PetStoreSteps extends ScenarioSteps {
         return accountPage.registerNewUser(username, password, repeatPass);
     }
 
+    @Step("user adds account information")
+    public AccountPage addAccounInformatio(String fname, String lname, String email,
+                                           String phne,  String add1,  String add2,
+                                           String city,  String state, String zip,
+                                           String code,  String country){
+        return accountPage.addAccountInfo(fname,lname,email,phne,add1,add2,
+                                          city,state,zip,code,country);
+    }
+
+    @Step("Profile heading is displayed")
+    public AccountPage profileHedingIsDisplayed(){
+        return accountPage.profileInformation();
+    }
+
+    @Step("click save user account informatio")
+    public AccountPage saveUserAccount(){
+        return accountPage.clickSaveAccInfo();
+    }
     /*
     Dashboard page
      */
@@ -80,5 +99,10 @@ public class PetStoreSteps extends ScenarioSteps {
     @Step("Get Welcome message")
     public String getGreetingMessage() {
         return dashbordPage.getGreetingMessage();
+    }
+
+    @Step("Select products form the side menu bar")
+    public ProductsPage selectProductFromTheSideMenuBar(PetCategory petCategory){
+        return dashbordPage.selectProductFromTheSideMenuBar(petCategory);
     }
 }

@@ -1,6 +1,7 @@
 package com.jpetstore.tests;
 
 import com.jpetstore.steps.PetStoreSteps;
+import jpetstore.pages.pages.PetCategory;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
@@ -10,7 +11,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
-public class Sample {
+public class DashboardPageTest {
 
     @Managed
     WebDriver driver;
@@ -19,9 +20,10 @@ public class Sample {
     PetStoreSteps shopper;
 
     @Test
-    @Title(("navigating to sign out page"))
-    public void navigateToLoginPage() throws InterruptedException {
+    @Title("Selecting product from the dashborad!!")
+    public void selectProducFromDashborad() throws InterruptedException {
         shopper.navigateToSignInPage();
-//        shopper.doLogin("root","root");
+        shopper.selectProductFromTheSideMenuBar(PetCategory.DOGS);
+
     }
 }

@@ -30,7 +30,7 @@ public class BasePage extends PageObject {
     public LoginPage navigateToSignInPage() throws InterruptedException {
     open();
     waitFor(ENTER_THE_STORE_LINK).$(ENTER_THE_STORE_LINK).click();
-    waitFor(SIGN_IN_LINK).$(SIGN_IN_LINK).click();
+//    waitFor(SIGN_IN_LINK).$(SIGN_IN_LINK).click();
         Thread.sleep(2000);
         return this.switchToPage(LoginPage.class);
 }
@@ -48,6 +48,7 @@ public class BasePage extends PageObject {
     }
     //navigate to the dashboard
     public DashbordPage navigateToDashboard(){
+        open();
         waitFor(DASH_BOARD_LINK).$(DASH_BOARD_LINK).click();
         return switchToPage(DashbordPage.class);
     }
