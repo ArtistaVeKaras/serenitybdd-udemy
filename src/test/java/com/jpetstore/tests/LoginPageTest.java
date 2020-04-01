@@ -27,5 +27,24 @@ public class LoginPageTest {
         storeSteps.doLogin("bob","bob");
         String GreeetingMsg = storeSteps.getGreetingMessage();
         assertEquals("Welcome jlk!",GreeetingMsg);
+
+    }
+
+    @Test
+    @Title("Verify user is able to logout")
+    public void verifyUserCanLogout() throws InterruptedException {
+
+        storeSteps.navigateToSignInPage();
+        storeSteps.doLogin("bob", "bob");
+        storeSteps.signOut();
+    }
+
+    @Test
+    @Title("Verify use recieves invalid message when sign in with invalid credentials")
+    public void verifyIfMessageIsDisplayed() throws InterruptedException {
+        storeSteps.navigateToSignInPage();
+        storeSteps.doLogin("ok","ok");
+       String expMesg = storeSteps.getInvalidMessgeString();
+       assertEquals("Invalid username or password. Signon failed.",expMesg);
     }
 }

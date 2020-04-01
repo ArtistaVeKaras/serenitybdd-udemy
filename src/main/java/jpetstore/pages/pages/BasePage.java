@@ -1,6 +1,7 @@
 package jpetstore.pages.pages;
 
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.By;
 
 public class BasePage extends PageObject {
 
@@ -53,6 +54,7 @@ public class BasePage extends PageObject {
     //click sign out link
     public DashbordPage signOut(){
         waitFor(SIGN_OUT_LINK).$(SIGN_OUT_LINK).click();
+        waitFor(SIGN_OUT_LINK).shouldNotBeVisible(By.xpath(SIGN_OUT_LINK));
         return switchToPage(DashbordPage.class);
     }
     //navigate to account page
@@ -61,7 +63,7 @@ public class BasePage extends PageObject {
         return switchToPage(AccountPage.class);
     }
     //search for products
-    public ProductsPage searchForProduc(String searchValue){
+    public ProductsPage searchForProduct(String searchValue){
         waitFor(ENTER_TEXT_FIELD_LINK).$(ENTER_TEXT_FIELD_LINK).sendKeys(searchValue);
         waitFor(SEARCH_LINK).$(SEARCH_LINK).click();
         return switchToPage(ProductsPage.class);
