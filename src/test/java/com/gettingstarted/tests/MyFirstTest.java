@@ -6,8 +6,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-//import org.testng.annotations.Test;
-
 @RunWith(SerenityRunner.class)
 public class MyFirstTest {
 
@@ -44,5 +42,4 @@ public class MyFirstTest {
 //            alert.jsAlertButton();
 //        alert.sendKeysjsAlertButton();
     }
-
 }

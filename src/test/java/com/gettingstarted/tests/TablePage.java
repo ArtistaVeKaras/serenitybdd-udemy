@@ -7,8 +7,6 @@ import net.thucydides.core.pages.components.HtmlTable;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import static net.thucydides.core.matchers.BeanMatchers.the;
@@ -19,8 +17,7 @@ import static org.hamcrest.CoreMatchers.*;
 @DefaultUrl("/tables")
 public class TablePage extends PageObject {
 
-    @FindBy(how = How.ID, using = "table2")
-    protected WebElementFacade table;
+    @FindBy(how = How.ID, using = "table2") protected WebElementFacade table;
 
     //read the complete table as a list of key value pairs
     public void readCompleteTable(){
@@ -31,7 +28,6 @@ public class TablePage extends PageObject {
     }
     //extract rows based on certain conditions email ending with yahoo.com
     public void extractFilterdRowsFromTable(){
-
         open();
         List<WebElement> rowsValue =
                 filterRows(table, the ("Email", endsWith("yahoo.com")));
@@ -47,7 +43,7 @@ public class TablePage extends PageObject {
             System.out.println(heading);
         }
     }
-    //extrac all the rows expect the headings
+    //extrac all the rows from the table expect the headings
     public void extractAllRows(){
         open();
         List<WebElement> rowsElements =
@@ -56,7 +52,7 @@ public class TablePage extends PageObject {
             System.out.println(r.getText());
         }
     }
-    //extract based on certains conditions
+    //extract based on certain conditions
     public void extractRowsBasedOnConditions(){
         open();
         List<WebElement> row = inTable(table).getRowElementsWhere(the("First Name", equalTo("Frank")));

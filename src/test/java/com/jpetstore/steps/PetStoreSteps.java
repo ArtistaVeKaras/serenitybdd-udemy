@@ -10,6 +10,7 @@ public class PetStoreSteps extends ScenarioSteps {
     LoginPage loginPage;
     AccountPage accountPage;
     DashbordPage dashbordPage;
+    HelpPage helpPage;
 
     //This is a wrapper
     @Step("Signig out from the store")
@@ -52,7 +53,7 @@ public class PetStoreSteps extends ScenarioSteps {
      */
     @Step("Get invalid login message")
     public String getInvalidMessgeString() {
-        return loginPage.getInvalidMessgeString();
+        return loginPage.getInvalidMessageString();
     }
 
     @Step("navigate to the registration page")
@@ -104,5 +105,10 @@ public class PetStoreSteps extends ScenarioSteps {
     @Step("Select products form the side menu bar")
     public ProductsPage selectProductFromTheSideMenuBar(PetCategory petCategory){
         return dashbordPage.selectProductFromTheSideMenuBar(petCategory);
+    }
+
+    @Step("Navigate to helpPage")
+    public HelpPage navigateToHelpPage() {
+        return helpPage.navigateToHelpPage();
     }
 }

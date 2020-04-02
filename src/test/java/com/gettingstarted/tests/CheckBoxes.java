@@ -1,7 +1,5 @@
 package com.gettingstarted.tests;
 
-
-import com.google.inject.internal.cglib.proxy.$NoOp;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
@@ -11,10 +9,8 @@ import org.openqa.selenium.support.FindBy;
 @DefaultUrl("/checkboxes")
 public class CheckBoxes extends PageObject {
 
-    @FindBy(xpath = "//form[@id='checkboxes']/input[2]")
-    public WebElementFacade _ckbox2;
-    @FindBy(xpath = "//form[@id='checkboxes']/input[1]")
-    public WebElementFacade _ckbox1;
+    @FindBy(xpath = "//form[@id='checkboxes']/input[2]") public WebElementFacade _ckbox2;
+    @FindBy(xpath = "//form[@id='checkboxes']/input[1]") public WebElementFacade _ckbox1;
 
     /*select the first checkbox
    and unselect the second box

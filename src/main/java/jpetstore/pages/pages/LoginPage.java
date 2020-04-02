@@ -30,7 +30,7 @@ public class LoginPage extends BasePage {
         return switchToPage(AccountPage.class);
     }
 
-    public String getInvalidMessgeString(){
+    public String getInvalidMessageString(){
         return waitFor(REGISTRAGION_FAILED_MESSAGE).getText();
     }
 }

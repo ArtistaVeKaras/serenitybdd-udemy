@@ -10,7 +10,7 @@ public class JavaScriptPage extends PageObject {
     public void executeJS() throws InterruptedException {
         open();
         //both lines perform the same operation
-//            evaluateJavascript("document.querySelector(\"a[href='/abtest']\").click()");
+        //evaluateJavascript("document.querySelector(\"a[href='/abtest']\").click()");
         WebElement jsElement  = (WebElement) evaluateJavascript(" return document.querySelector(\"a[href='/abtest']\")");
         jsElement.click();
         Thread.sleep(3000);
